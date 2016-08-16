@@ -70,6 +70,33 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
     }
 }
 
+-(void)shake{
+    //获取到当前View的layer
+    CALayer *viewLayer = self.layer;
+    //获取当前View的位置
+    CGPoint position = viewLayer.position;
+    //移动的两个终点位置
+    CGPoint beginPosition = CGPointMake(position.x + 15, position.y);
+    CGPoint endPosition = CGPointMake(position.x - 15, position.y);
+    //设置动画
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    //设置运动形式
+    [animation setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionDefault]];
+    //设置开始位置
+    [animation setFromValue:[NSValue valueWithCGPoint:beginPosition]];
+    //设置结束位置
+    [animation setToValue:[NSValue valueWithCGPoint:endPosition]];
+    //设置自动反转
+    [animation setAutoreverses:YES];
+    //设置时间
+    [animation setDuration:.02];
+    //设置次数
+    [animation setRepeatCount:5];
+    //添加上动画
+    [viewLayer addAnimation:animation forKey:nil];
+    
+}
+
 
 - (UIViewController *)viewController {
     for (UIView *view = self; view; view = view.superview) {

@@ -52,6 +52,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllSubviews;
 
 /**
+ *  shake beetwon left and right;
+ */
+- (void)shake;
+
+/**
  Returns the view's view controller (may be nil).
  */
 @property (nullable, nonatomic, readonly) UIViewController *viewController;

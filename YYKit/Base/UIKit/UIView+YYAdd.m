@@ -97,6 +97,11 @@ YYSYNTH_DUMMY_CLASS(UIView_YYAdd)
     
 }
 
+-(void)CornerRadioWithHalfHeight{
+    self.layer.cornerRadius = self.bounds.size.height/2;
+    self.clipsToBounds = YES;
+}
+
 
 - (UIViewController *)viewController {
     for (UIView *view = self; view; view = view.superview) {

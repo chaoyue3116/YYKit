@@ -52,9 +52,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeAllSubviews;
 
 /**
- *  shake beetwon left and right;
+ shake beetwon left and right;
  */
 - (void)shake;
+
+
+/**
+ CornerRadioWithHalfHeight
+ */
+- (void)CornerRadioWithHalfHeight;
 
 /**
  Returns the view's view controller (may be nil).

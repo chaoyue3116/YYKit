@@ -358,6 +358,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isNotBlank;
 
 /**
+ Returns YES if the string is a phoneNumber in china.
+ */
+- (BOOL)isValidateChineseMobilePhoneNumber;
+
+/**
  Returns YES if the target string is contained within the receiver.
  @param string A string to test the the receiver.
  
